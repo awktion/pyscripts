@@ -3,7 +3,7 @@
 #python is cake
 
 
-bill = int(raw_input("How Much Is The Bill?"))
+bill = float(raw_input("How Much Is The Bill?"))
 print ""
 #test input:
 #print "the bill is", bill
@@ -13,11 +13,11 @@ tipcentage = int(raw_input("What Percentage Do You Want To Tip?"))
 print ""
 print "Calculating Payment..."
 #lets do math
-tip = bill * tipcentage / 100
+tip = round(bill * tipcentage / 100, 2)
 total = bill + tip
-tipeach = tip / people
-totaleach = total / people
-billeach = bill / people
+tipeach = round(tip / people, 2)
+totaleach = round(total / people, 2)
+billeach = round(bill / people, 2)
 print "for a bill of", bill
 print "tipping percentage", tipcentage
 print "with a group of", people
